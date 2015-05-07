@@ -11,7 +11,7 @@ abstract public class Logger {
 
     public String log(String classname, String message, LogLevel level, Boolean isTest) {
         String formattedMessage = null;
-        if (isTest) {
+        if (isTest && level.value >= getLogLevel().value) {
             formattedMessage = getFormattedMessage(classname, message, level);
         }
         return formattedMessage;
