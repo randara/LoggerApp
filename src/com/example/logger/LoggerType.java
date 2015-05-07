@@ -5,6 +5,6 @@ package com.example.logger;
  */
 public enum LoggerType {
 
-    CONSOLE, FILE;
+    CONSOLE, FILE, ASYNC;
 
 }

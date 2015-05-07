@@ -15,6 +15,13 @@ public class LoggerFactory {
 
         switch(type) {
 
+            case FILE:
+                logger = new FileLogger(level, path);
+                break;
+            case ASYNC:
+                logger = new AsyncLogger(new FileLogger(level, path));
+                break;
+            case CONSOLE:
             default:
                 logger = new ConsoleLogger(level);
                 break;
